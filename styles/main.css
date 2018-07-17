@@ -14,7 +14,7 @@ header {
 }
 
 nav{
-	height: 750px;
+	height: 770px;
 	width: 97%;
 	display: flex;
 	position: fixed;
@@ -24,8 +24,8 @@ nav{
 
 h1{
 	font-family: "Lato", Helvetica;
-	font-size: 2em;
-	letter-spacing: 2px;
+	font-size: 3em;
+	letter-spacing: 4px;
 }
 
 a{
@@ -58,17 +58,17 @@ li{
 }
 
 #one:hover ~ #first{
-    width: 90%;
+    width: 50%;
 }
 
 #two:hover ~ #second{
-    width: 95%;
+    width: 50%;
 }
 
 #three:hover ~ #third{
-    width: 90%;
+    width: 50%;
 }
 
 #four:hover ~ #fourth{
-    width: 100%;
+    width: 50%;
 }

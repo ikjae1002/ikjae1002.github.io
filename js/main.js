@@ -24,3 +24,20 @@ for(var i = 0; i<listLength; i++){
     // }, time);
     time += 500;
 }
+
+//jquery for CSS
+
+$(document).on('click', "a", function(){
+    var newurl = $(this).attr('href');
+
+    if(newurl == '#'){
+        location.hash = newurl;
+        return;
+    }
+
+    $("html").fadeOut(function(){
+        location = newurl;
+    });
+
+    return false;
+});

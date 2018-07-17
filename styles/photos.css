@@ -1,0 +1,81 @@
+body{
+    margin: auto;
+    padding: 0;
+    width: 100%;
+}
+
+nav{
+    padding-left: 15px;
+    padding-top: 0;
+    height: 50px;
+    position: relative;
+}
+
+h1{
+    font-family: "Lato", Helvetica;
+    font-size: 30px;
+    letter-spacing: 4px;
+    animation: slide 0.5s forwards;
+    float: left;
+    position: relative;
+    bottom: -60px;
+    transition-property: bottom;
+    transition-duration: 1s;
+}
+
+ul{
+    float: left;
+}
+
+li{
+    list-style: none;
+    margin-top: 18px;
+    font-family: "Lato", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 4px;
+    position: relative;
+    bottom: -50px;
+    transition-property: bottom;
+    transition-duration: 1s;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navigators{
+    overflow: hidden;
+    margin-right: 15px;
+    float: left;
+}
+
+#slide{
+    overflow: hidden;
+    float: left;
+}
+
+.line{
+    background-color: black;
+    height: 1px;
+    margin: auto;
+    margin-top: 3px;
+    margine-left: 15px;
+    width: 0%;
+    transition-duration: .5s;
+    transition-property: width;
+
+}
+
+#two:hover ~ #second{
+    width: 50%;
+}
+
+#three:hover ~ #third{
+    width: 50%;
+}
+
+#four:hover ~ #fourth{
+    width: 50%;
+}
