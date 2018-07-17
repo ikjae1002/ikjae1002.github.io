@@ -14,7 +14,7 @@ header {
 }
 
 nav{
-	height: 700px;
+	height: 750px;
 	width: 97%;
 	display: flex;
 	position: fixed;
@@ -54,6 +54,7 @@ li{
     width: 0%;
     transition-duration: .5s;
     transition-property: width;
+    margin-bottom: 10px;
 }
 
 #one:hover ~ #first{
