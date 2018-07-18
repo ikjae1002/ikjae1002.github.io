@@ -1,4 +1,5 @@
 // Javascript for CSS
+AOS.init();
 var myname = document.querySelector("h1");
 var navigate = document.querySelectorAll("li");
 var underline = document.getElementById("active");

@@ -19,9 +19,6 @@ function changeOpacity(ele){
 for(var i = 0; i<listLength; i++){
     console.log(time);
     setTimeout(changeOpacity,time,listEle[i]);
-    // listEle[i].setInterval(function(ele){
-    //     ele.style.opacity = 1.0;
-    // }, time);
     time += 500;
 }
 

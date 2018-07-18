@@ -5,6 +5,7 @@
     <title>Home</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="js/aos-master/dist/aos.css">
 </head>
 <body>
     <nav>
@@ -31,7 +32,25 @@
         </ul>
     </nav>
 
+    <div id="contents">
+        <div data-aos="fade-up" data-aos-delay="2600" data-aos-duration="1000" data-aos-once="true">
+            <h2 id="con1">Welcome</h2>
+            <p id="con2">My name is Joshua (Ikjae) Jung</p>
+            <p id="con3">Full Stack Developer, Musician, and Photographer </p>
+        </div>
+
+        <div data-aos="fade-up" data-aos-delay="2800" data-aos-duration="1000" data-aos-once="true" id="image"></div>
+
+        <div data-aos="fade-up" data-aos-delay="3000" data-aos-duration="1000" data-aos-once="true">
+            <p id="explanation">I'm a passionate and dedicated Front-end/Back-end Developer who is capable of providing
+                creative and efficient websites. Known as aesthetic developer, I am dedicated to provide best user experience
+                throughout the creative contents, interactions, and features. This is my personal website where you'll be able
+                to see my personal work and photography. Please enjoy!</p>
+        </div>
+    </div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/aos-master/dist/aos.js"></script>
     <script src="js/home.js"></script>
 </body>
 </html>

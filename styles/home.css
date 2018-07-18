@@ -1,5 +1,4 @@
 body{
-    margin: auto;
     padding: 0;
     width: 100%;
 }
@@ -21,6 +20,13 @@ h1{
     bottom: -60px;
     transition-property: bottom;
     transition-duration: 1s;
+}
+
+h2{
+    font-family: "Lato", Helvetica;
+    font-size: 60px;
+    letter-spacing: 4px;
+    opacity: .4;
 }
 
 ul{
@@ -78,4 +84,56 @@ a{
 
 #four:hover ~ #fourth{
     width: 50%;
+}
+
+#contents{
+    width:80%;
+    margin: auto;
+    clear: both;
+}
+
+#con1{
+    margin-top: 100px;
+    position: relative;
+    text-align: left;
+}
+
+#con2{
+    margin-top: -45px;
+    position: relative;
+    text-align: left;
+    font-family: "Lato", Helvetica;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+#con3{
+    margin-top: -30px;
+    text-align: left;
+    font-family: "Lato", Helvetica;
+    font-size: 30px;
+    letter-spacing: 2px;
+    opacity: .8;
+}
+
+#explanation{
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-family: "Lato", Helvetica;
+    font-size: 22px;
+    letter-spacing: 2px;
+    width: 80%;
+    opacity: .7;
+}
+
+#image{
+    margin:auto;
+    text-align: center;
+    border-radius: 50%;
+    background-image: url("../images/profile.jpg");
+    transition-property: border-radius;
+    transition-duration: 1s;
+    width:200px;
+    height:200px;
 }
