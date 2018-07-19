@@ -59,6 +59,18 @@ img{
     border-radius: 50%;
 }
 
+footer{
+    padding-top: 150px;
+    font-family: "Lato", Helvetica;
+    font-size: 10px;
+    font-weight: 300;
+    margin: auto;
+}
+
+footer > p{
+    text-align: center;
+}
+
 .navigators{
     overflow: hidden;
     margin-right: 15px;
@@ -130,7 +142,19 @@ img{
     text-align: center;
     font-family: "Lato", Helvetica;
     font-size: 22px;
+    font-weight: 300;
     letter-spacing: 2px;
     width: 80%;
     opacity: .7;
+}
+
+#image{
+    margin-bottom: 30px;
+}
+
+#bar{
+    width: 85%;
+    background-color: dimgray;
+    height: 1px;
+    margin: auto;
 }
