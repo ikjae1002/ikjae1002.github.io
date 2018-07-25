@@ -45,6 +45,30 @@ a{
     color: black;
 }
 
+#aboutMe > h2{
+    font-size: 40px;
+    letter-spacing: 4px;
+    color: dimgray;
+    margin-bottom: 15px;
+}
+
+#social > h3{
+    font-size: 25px;
+    letter-spacing: 4px;
+    color: #444444;
+}
+
+#bolded{
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+#funFacts{
+    letter-spacing: 2px;
+    font-size: 16px;
+    color: #333333;
+}
+
 .navigators{
     overflow: hidden;
     margin-right: 15px;
@@ -78,4 +102,71 @@ a{
 
 #four:hover ~ #fourth{
     width: 50%;
+}
+
+#contents{
+    width: 80%;
+    margin: auto;
+    height: auto;
+}
+
+#intro{
+    width: 100%;
+    margin: auto;
+    height: auto;
+    padding-top: 100px;
+}
+
+#aboutMe{
+    font-family: "Lato", Helvetica;
+    float: left;
+    width:80%;
+    margin-left: 0;
+    padding-left: 0;
+    display: block;
+    position: relative;
+}
+
+#social{
+    padding-top: 20px;
+    float: left;
+    width:10%;
+    margin: auto;
+    font-family: "Lato", Helvetica;
+    padding-left: 50px;
+}
+
+.links{
+    padding-bottom: 20px;
+}
+
+#aboutBar{
+    display: block;
+    left:0;
+    width: 203px;
+    height: 2px;
+    background-color: dimgray;
+    margin-top: -5px;
+}
+
+#skills{
+    clear: both;
+    width: 100%;
+    text-align: center;
+    font-family: "Lato", Helvetica;
+    font-size: 30px;
+    letter-spacing: 4px;
+    color: #52453C;
+}
+
+#skills > h2{
+    margin-top: 400px;
+}
+
+#skillsBar{
+    width: 200px;
+    height: 2px;
+    background-color: #52453C;
+    margin:auto;
+    margin-top: -25px;
 }

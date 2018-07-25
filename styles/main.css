@@ -15,7 +15,7 @@ header {
 
 nav{
 	height: 770px;
-	width: 97%;
+	width: 100%;
 	display: flex;
 	position: fixed;
 	align-items: center;
@@ -35,6 +35,9 @@ a{
 
 ul{
 	list-style: none;
+	display: block;
+	margin: auto;
+	padding: 0;
 }
 
 li{

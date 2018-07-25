@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <title>Home</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400" rel="stylesheet">
-    <link rel="stylesheet" href="styles/about.css">
+    <link rel="stylesheet" media="only screen and (min-width:601px)" href="styles/about.css">
+    <link rel="stylesheet" media="only screen and (max-width:600px)" href="styles/aboutMobile.css">
+    <link rel="stylesheet" href="js/aos-master/dist/aos.css">
+    <meta name="viewport" content="width=width-device, initial-scale=1">
 </head>
 <body>
     <nav>
@@ -31,7 +34,31 @@
         </ul>
     </nav>
 
+    <div id="contents">
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" id="intro">
+            <div id="aboutMe">
+                <h2>About Me</h2>
+                <div id="aboutBar"></div>
+                <p id="bolded">I'm a Full Stack Developer from New York, heart of the world! I'm a
+                    recent graduate from New York University and currently living in Bushwick, Brooklyn.</p>
+                <p id="funFacts">When I'm not coding, I enjoy playing music, taking pictures, go to
+                    ceramic and metal smithing studios.</p>
+            </div>
+            <div id="social">
+                <h3>Connect</h3>
+                <div class="links"><a href="https://www.instagram.com/ijosh_jung/"><img src="images/instagram.jpg" height="30" width="30"></a></div>
+                <div class="links"><a href="https://www.linkedin.com/in/joshua-jung-bb328910a/"><img src="images/linkedin.png" height="30" width="30"></a></div>
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" id="skills">
+            <h2>Skills</h2>
+            <div id="skillsBar"></div>
+        </div>
+        <div
+    </div>
+
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/aos-master/dist/aos.js"></script>
     <script src="js/about.js"></script>
 </body>
 </html>

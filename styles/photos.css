@@ -76,6 +76,6 @@ a{
     width: 50%;
 }
 
-#four:hover ~ #fourth{
+#one:hover ~ #first{
     width: 50%;
 }
