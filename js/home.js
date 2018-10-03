@@ -2,7 +2,6 @@
 AOS.init();
 var myname = document.querySelector("h1");
 var navigate = document.querySelectorAll("li");
-var underline = document.getElementById("active");
 var time = 1000;
 
 function changeProperty(ele){
@@ -10,8 +9,8 @@ function changeProperty(ele){
 }
 
 setTimeout(function(e){
-    e.style.width = "50%";
-},2000,underline);
+    $('#active').animate({marginTop: "5px"}, 1000);
+},2000);
 
 setTimeout(changeProperty,500,myname);
 
@@ -36,3 +35,21 @@ $(document).on('click', "a", function(){
 
     return false;
 });
+
+$('#screen').animate({height: '0px'}, 1000);
+
+setTimeout(function(){
+    $('#firstleft').animate({left: '0px'}, 1000);
+    $('#firstright').animate({right: '0px'}, 1000);
+
+},1000);
+
+setTimeout(function(){
+    $('#secondleft').animate({left: '0px'}, 1000);
+    $('#secondright').animate({right: '0px'}, 1000);
+},1500);
+
+setTimeout(function(){
+    $('#thirdleft').animate({left: '0px'}, 1000);
+    $('#thirdright').animate({right: '0px'}, 1000);
+},2000);

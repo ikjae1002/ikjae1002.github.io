@@ -8,24 +8,26 @@ header {
 	height: 500px;
 	width: 100%;
 	display: flex;
-	position: fixed;
+	position: relative;
 	align-items: center;
 	justify-content: center;
+	z-index: 2;
 }
 
 nav{
-	height: 770px;
+	margin-top: -200px;
 	width: 100%;
-	display: flex;
-	position: fixed;
-	align-items: center;
-	justify-content: center;
+	position: absolute;
+	z-index: 2;
 }
 
 h1{
-	font-family: "Lato", Helvetica;
+	font-family: Raleway, Helvetica;
 	font-size: 3em;
+	font-weight: 400;
 	letter-spacing: 4px;
+	color: black;
+	z-index: 2;
 }
 
 a{
@@ -35,43 +37,94 @@ a{
 
 ul{
 	list-style: none;
-	display: block;
 	margin: auto;
-	padding: 0;
+	text-align: center;
+	width: 100%;
 }
 
 li{
-	font-family: "Lato", Helvetica;
+	font-family: Raleway, Helvetica;
 	font-size: 1.5em;
 	font-weight: 300;
-	text-align: center;
 	color: black;
 	padding-bottom: 4px;
 }
 
-.line{
-    background-color: black;
-    height: 1px;
-    margin: auto;
-    align-items: center;
-    width: 0%;
-    transition-duration: .5s;
-    transition-property: width;
-    margin-bottom: 10px;
+#one{
+	right: 0px;
+	display: inline-block;
 }
 
-#one:hover ~ #first{
-    width: 50%;
+#two{
+	display: inline-block;
 }
 
-#two:hover ~ #second{
-    width: 50%;
+#three{
+	display: inline-block;
 }
 
-#three:hover ~ #third{
-    width: 50%;
+.lists{
+	clear: both;
+	float: left;
+	width: 48%;
+	position: relative;
+	height: 40px;
+	transition-property: width;
+	text-align: right;
 }
 
-#four:hover ~ #fourth{
-    width: 50%;
+.triangles{
+	overflow: hidden;
+	float: right;
+	width: 50%;
+	height: 40px;
+	position: relative;
+	left: 0px;
+	text-align: left;
+}
+
+#hometri {
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-left: solid 20px #d0b783;
+	border-top: solid 12px transparent;
+	border-bottom: solid 12px transparent;
+	margin-top: 3px;
+	margin-left: -8px;
+}
+
+#abouttri{
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-left: solid 20px #f96161;
+	border-top: solid 12px transparent;
+	border-bottom: solid 12px transparent;
+	margin-top: 3px;
+	margin-left: -8px;
+}
+
+#photostri{
+	height: 0;
+	width: 0;
+	position: absolute;
+	border-left: solid 20px #bcd2d0;
+	border-top: solid 12px transparent;
+	border-bottom: solid 12px transparent;
+	margin-top: 3px;
+	margin-left: -8px;
+}
+
+#screen{
+	width: 100%;
+	bottom: 0;
+	overflow: visible !important;
+	position: absolute;
+}
+
+#title{
+	display: inline-block;
+	width: 100%;
+	position: absolute;
 }

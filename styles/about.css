@@ -12,7 +12,8 @@ nav{
 }
 
 h1{
-    font-family: "Lato", Helvetica;
+    font-family: Raleway, Helvetica;
+    font-weight: 300;
     font-size: 30px;
     letter-spacing: 4px;
     animation: slide 0.5s forwards;
@@ -30,7 +31,7 @@ ul{
 li{
     list-style: none;
     margin-top: 18px;
-    font-family: "Lato", Helvetica;
+    font-family: Raleway, Helvetica;
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 4px;
@@ -48,7 +49,8 @@ a{
 #aboutMe > h2{
     font-size: 40px;
     letter-spacing: 4px;
-    color: dimgray;
+    color: black;
+    opacity: .7;
     margin-bottom: 15px;
 }
 
@@ -143,20 +145,21 @@ a{
 #aboutBar{
     display: block;
     left:0;
-    width: 203px;
+    width: 250px;
     height: 2px;
-    background-color: dimgray;
-    margin-top: -5px;
+    background-color: black;
+    opacity: .7;
+    margin-top: -10px;
 }
 
 #skills{
     clear: both;
     width: 100%;
-    text-align: center;
     font-family: "Lato", Helvetica;
     font-size: 30px;
     letter-spacing: 4px;
-    color: #52453C;
+    color: black;
+    opacity: .7;
 }
 
 #skills > h2{
@@ -164,9 +167,9 @@ a{
 }
 
 #skillsBar{
-    width: 200px;
+    width: 150px;
     height: 2px;
-    background-color: #52453C;
-    margin:auto;
-    margin-top: -25px;
+    background-color: black;
+    opacity: .7;
+    margin-top: -30px;
 }
