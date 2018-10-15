@@ -6,9 +6,16 @@ body{
 
 nav{
     padding-left: 15px;
-    padding-top: 0;
-    height: 50px;
-    position: relative;
+    top: 0;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 10;
+    -webkit-transition: background-color 0.6s ease;
+    -moz-transition: background-color 0.6s ease;
+    -ms-transition: background-color 0.6s ease;
+    -o-transition: background-color 0.6s ease;
+    transition: background-color 0.6s ease;
 }
 
 h1{
@@ -43,32 +50,54 @@ li{
 
 a{
     text-decoration: none;
-    color: black;
+    color: white;
+    -webkit-transition: color 0.6s ease;
+    -moz-transition: color 0.6s ease;
+    -ms-transition: color 0.6s ease;
+    -o-transition: color 0.6s ease;
+    transition: color 0.6s ease;
 }
 
-#aboutMe > h2{
-    font-size: 40px;
-    letter-spacing: 4px;
-    color: black;
-    opacity: .7;
-    margin-bottom: 15px;
+@keyframes zoominout {
+    0%  {transform:scale(1,1);}
+    50%  {transform:scale(1.1,1.1);}
+    100%  {transform:scale(1,1);}
 }
 
-#social > h3{
-    font-size: 25px;
-    letter-spacing: 4px;
-    color: #444444;
+#background{
+    background: url('../images/about.jpg') center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: calc(100vh + 100px);
+    margin-top: -50px;
+    animation: zoominout 40s linear infinite;
+    z-index: -1;
+    position: absolute;
+    overflow: hidden;
 }
 
-#bolded{
-    letter-spacing: 2px;
-    font-size: 20px;
+#wrap{
+    overflow: hidden;
+    height: calc(100vh + 100px);
+    width: 100%;
+    margin-top: -50px;
+    position: relative;
+    z-index: -1;
+    clear: both;
+    display: block;
 }
 
-#funFacts{
-    letter-spacing: 2px;
-    font-size: 16px;
-    color: #333333;
+#cont1{
+    width: 100%;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+#cont1 > h2{
+    font-family: Raleway, Helvetica;
+    font-size: 75px;
+    font-weight: 600;
+    color: #333;
 }
 
 .navigators{
@@ -77,99 +106,203 @@ a{
     float: left;
 }
 
+#navigates{
+    float: left;
+}
+
 #slide{
     overflow: hidden;
     float: left;
+    color: white;
 }
 
-.line{
-    background-color: black;
-    height: 1px;
+.hidden{
+    overflow: hidden;
     margin: auto;
-    margin-top: 3px;
-    margine-left: 15px;
-    width: 0%;
-    transition-duration: .5s;
-    transition-property: width;
-
-}
-
-#one:hover ~ #first{
-    width: 50%;
-}
-
-#three:hover ~ #third{
-    width: 50%;
-}
-
-#four:hover ~ #fourth{
-    width: 50%;
-}
-
-#contents{
-    width: 80%;
-    margin: auto;
-    height: auto;
-}
-
-#intro{
-    width: 100%;
-    margin: auto;
-    height: auto;
-    padding-top: 100px;
-}
-
-#aboutMe{
-    font-family: "Lato", Helvetica;
-    float: left;
-    width:80%;
-    margin-left: 0;
-    padding-left: 0;
-    display: block;
+    height: 20px;
     position: relative;
 }
 
-#social{
-    padding-top: 20px;
-    float: left;
-    width:10%;
-    margin: auto;
-    font-family: "Lato", Helvetica;
-    padding-left: 50px;
+#first{
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-left: solid 8px transparent;
+    border-top: solid 12px #d0b783;
+    border-right: solid 8px transparent;
+    margin-top: -12px;
+    left: 37%;
+    transition-property: margin-top;
+    transition-duration: .5s;
 }
 
-.links{
-    padding-bottom: 20px;
+#active{
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-left: solid 8px transparent;
+    border-top: solid 12px #f96161;
+    border-right: solid 8px transparent;
+    margin-top: -12px;
+    left: 37%;
 }
 
-#aboutBar{
-    display: block;
-    left:0;
-    width: 250px;
-    height: 2px;
-    background-color: black;
-    opacity: .7;
-    margin-top: -10px;
+#third{
+    height: 0;
+    width: 0;
+    position: absolute;
+    border-left: solid 8px transparent;
+    border-top: solid 12px #bcd2d0;
+    border-right: solid 8px transparent;
+    margin-top: -12px;
+    left: 37%;
+    transition-property: margin-top;
+    transition-duration: .5s;
 }
 
-#skills{
-    clear: both;
+#one:hover ~ .hidden > #first{
+    margin-top: 5px;
+}
+
+#three:hover ~ .hidden > #third{
+    margin-top: 5px;
+}
+
+#contents{
     width: 100%;
-    font-family: "Lato", Helvetica;
+    display: block;
+    position: relative;
+    overflow: hidden;
+}
+
+#screen{
+    position: fixed;
+    z-index: 11;
+    bottom: 0;
+    height: 100vh;
+    background-color: #f96161;
+    width: 100%;
+}
+
+#title{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+}
+
+#cont2{
+    width: 80%;
+    margin: auto;
+}
+
+
+.leftcont{
+    width: 20%;
+    float: left;
+}
+
+.leftcont > h2{
+    font-family: "Cutive Mono";
+    font-size: 24px;
+    font-weight: 600;
+    color: #333;
+}
+
+.firstcircle{
+    position: absolute;
+    height:6px;
+    width: 6px;
+    border-radius: 3px;
+    background-color: #f96161;
+}
+
+.secondcircle{
+    position: absolute;
+    height:6px;
+    width: 6px;
+    border-radius: 3px;
+    background-color: #f96161;
+    margin-top: 15px;
+}
+
+.rightcont{
+    font-family: "Montserrat";
+    float: right;
+    padding-top: 6px;
+    width: 65%;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    overflow: auto;
+    line-height: 38px;
+}
+
+.row{
+    display: inline-block;
+    margin-bottom: 70px;
+    width: 100%;
+}
+
+#heading{
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    text-align: center;
+}
+
+#name{
+    text-align: center;
+    font-family: Montserrat, Raleway;
+    font-size: 70px;
+    font-weight: 400;
+    color: white;
+    opacity: 0.8;
+}
+
+#intro{
+    text-align: center;
+    font-family: "Cutive Mono", Raleway;
+    font-size: 20px;
+    color: white;
+    opacity: 0.9;
+}
+
+.fill{
+    background-color: #f96161;
+    float: right;
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.empty{
+    background-color: darkgray;
+    float: right;
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-top: 13px;
+}
+
+.rightcont > h2{
     font-size: 30px;
-    letter-spacing: 4px;
-    color: black;
-    opacity: .7;
+    font-weight: 300;
+    margin-top: 6px;
+    margin-bottom: 10px;
 }
 
-#skills > h2{
-    margin-top: 400px;
+.rightcont > p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 16px;
+    line-height: 26px;
 }
 
-#skillsBar{
-    width: 150px;
-    height: 2px;
-    background-color: black;
-    opacity: .7;
-    margin-top: -30px;
+.rightcont > .dates{
+    opacity: 0.6;
+    line-height: 50px;
 }

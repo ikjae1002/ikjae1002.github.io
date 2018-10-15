@@ -27,8 +27,8 @@ h1{
 }
 
 h2{
-    font-family: Raleway, Helvetica;
-    font-size: 20px;
+    font-family: "Cutive Mono", Helvetica;
+    font-size: 26px;
     letter-spacing: 4px;
     font-weight: 400;
 }
@@ -53,7 +53,7 @@ li{
 }
 
 #cont1>p{
-    font-family: Raleway, Helvetica;
+    font-family: "Montserrat";
     font-weight: 400;
     font-size: 32px;
     margin-top: 20px;
@@ -61,7 +61,7 @@ li{
 }
 
 #desc2>p{
-    font-family: Raleway, Helvetica;
+    font-family: "Montserrat";
     font-weight: 400;
     font-size: 32px;
     margin-top: 20px;
@@ -83,7 +83,7 @@ img{
 
 footer{
     padding-top: 150px;
-    font-family: "Lato", Helvetica;
+    font-family: Raleway, Helvetica;
     font-size: 12px;
     font-weight: 300;
     margin: auto;
@@ -154,18 +154,6 @@ footer > p{
 
 #three:hover ~ .hidden > #third{
     margin-top: 5px;
-}
-
-#explanation{
-    margin: auto;
-    margin-top: 30px;
-    text-align: center;
-    font-family: "Lato", Helvetica;
-    font-size: 22px;
-    font-weight: 300;
-    letter-spacing: 2px;
-    width: 80%;
-    color: dimgray;
 }
 
 #image{
@@ -289,10 +277,10 @@ footer > p{
 }
 
 #cont1{
-    padding-top: 200px;
-    width: 65%;
+    padding-top: 170px;
+    width: 75%;
     margin: auto;
-    padding-bottom: 200px;
+    padding-bottom: 170px;
 }
 
 #cont2{
@@ -301,24 +289,24 @@ footer > p{
 }
 
 #desc2{
-    padding-top: 200px;
-    width: 65%;
+    padding-top: 170px;
+    width: 75%;
     margin: auto;
-    padding-bottom: 200px;
+    padding-bottom: 170px;
 }
 
 .underline{
     background-color: black;
-    height: 3px;
+    height: 1px;
 }
 
 #under1{
-    width:89px;
+    width:110px;
     margin-top: -15px;
 }
 
 #under2{
-    width: 206px;
+    width: 232px;
     margin-top: -15px;
 }
 
@@ -338,4 +326,10 @@ footer > p{
     right: 0;
     position: absolute;
     border-right: solid 280px #d0b783;
+}
+
+#title{
+    display: inline-block;
+    width: 100%;
+    position: absolute;
 }

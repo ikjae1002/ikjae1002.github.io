@@ -3,75 +3,134 @@
 <head>
     <meta charset="UTF-8">
     <title>Home</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato|Poppins:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Montserrat:300,400" rel="stylesheet">
     <link rel="stylesheet" media="only screen and (min-width:601px)" href="styles/about.css">
     <link rel="stylesheet" media="only screen and (max-width:600px)" href="styles/aboutMobile.css">
     <link rel="stylesheet" href="js/aos-master/dist/aos.css">
-    <meta name="viewport" content="width=width-device, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
     <nav>
         <div id="slide">
             <a href="index.html"><h1>Joshua Jung</h1></a>
         </div>
-        <ul>
-            <div class="navigators">
-                <div class="lists" id="one"><a href="home.html"><li>Home</li></a></div>
-                <div class="line" id="first"></div>
-            </div>
-            <div class="navigators">
-                <div class="lists" id="two"><a href="#"><li>About</li></a></div>
-                <div class="line" id="active"></div>
-            </div>
-            <div class="navigators">
-                <div class="lists" id="three"><a href="work.html"><li>Work</li></a></div>
-                <div class="line" id="third"></div>
-            </div>
-            <div class="navigators">
-                <div class="lists" id="four"><a href="photos.html"><li>Photos</li></a></div>
-                <div class="line" id="fourth"></div>
-            </div>
-        </ul>
+        <div id="navigates">
+            <ul>
+                <div class="navigators">
+                    <div id="one"><a href="home.html"><li>Home</li></a></div>
+                    <div class="hidden"><div id="first"></div> </div>
+                </div>
+                <div class="navigators">
+                    <div id="two"><a href="#"><li>About</li></a></div>
+                    <div class="hidden"><div id="active"></div></div>
+                </div>
+                <div class="navigators">
+                    <div id="three"><a href="photos.html"><li>Photos</li></a></div>
+                    <div class="hidden"><div id="third"></div></div>
+                </div>
+            </ul>
+        </div>
     </nav>
+    <div id="wrap">
+        <div id="background"></div>
+        <div id="heading">
+            <div id="name">I'm Joshua</div>
+            <div id="intro">Web Developer | Photographer | Guitarist</div>
+        </div>
+    </div>
 
     <div id="contents">
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" id="intro">
-            <div id="aboutMe">
-                <h2>About Me</h2>
-                <div id="aboutBar"></div>
-                <p id="bolded">I'm a Full Stack Developer from New York, heart of the world! I'm a
-                    recent graduate from New York University and currently living in Bushwick, Brooklyn.</p>
-                <p id="funFacts">When I'm not coding, I enjoy playing music, taking pictures, go to
-                    ceramic and metal smithing studios.</p>
-            </div>
-            <div id="social">
-                <h3>Connect</h3>
-                <div class="links"><a href="https://www.instagram.com/ijosh_jung/"><img src="images/instagram.jpg" height="30" width="30"></a></div>
-                <div class="links"><a href="https://www.linkedin.com/in/joshua-jung-bb328910a/"><img src="images/linkedin.png" height="30" width="30"></a></div>
-            </div>
+        <div id="cont1">
+            <h2>About Me</h2>
         </div>
-        <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" id="skills">
-            <h2>Skills</h2>
-            <div id="skillsBar"></div>
-        </div>
-        <div id="sets">
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" id="frontend">
-                <div class="topic">
-                    <h3>Front-End</h3>
+        <div id="cont2">
+            <div class="row">
+                <div class="leftcont">
+                    <h2>Profile</h2>
+                    <div class="firstcircle"></div>
+                    <div class="secondcircle"></div>
+                </div>
+                <div class="rightcont">
+                    My name is Joshua (Ikjae) Jung. I'm a Full Stack Developer based in Brooklyn, New York. I'm a recent
+                    grad from New York University. I love creating web contents that are fun and creative.
                 </div>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" id="backend">
-                <div class="topic">
-                    <h3>Back-End</h3>
+            <div class="row">
+                <div class="leftcont">
+                    <h2>Skills</h2>
+                    <div class="firstcircle"></div>
+                    <div class="secondcircle"></div>
+                </div>
+                <div class="rightcont">
+                    <div class="6">C++</div>
+                    <div class="9">CSS</div>
+                    <div class="9">HTML</div>
+                    <div class="9">JavaScript</div>
+                    <div class="8">JQuery</div>
+                    <div class="7">MongoDB</div>
+                    <div class="8">Node.js</div>
+                    <div class="7">Objective-C</div>
+                    <div class="4">React.js</div>
+                    <div class="5">Swift</div>
                 </div>
             </div>
-            <div data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" id="languages">
-                <div class="topic">
-                    <h3>Languages</h3>
+            <div class="row">
+                <div class="leftcont">
+                    <h2>Education</h2>
+                    <div class="firstcircle"></div>
+                    <div class="secondcircle"></div>
+                </div>
+                <div class="rightcont">
+                    <h2>New York University</h2>
+                    <p>2014-2018</p>
+                    <p>B.A. in Computer Science</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="leftcont">
+                    <h2>Experience</h2>
+                    <div class="firstcircle"></div>
+                    <div class="secondcircle"></div>
+                </div>
+                <div class="rightcont">
+                    <h2>Programming Intern - Thankster.com</h2>
+                    <p class="dates">June 2016 - September 2016</p>
+                    <p>Programmed codes that enhanced mass data input functions from affiliated companies, using Python
+                    to Google APIs to easily organize incoming information automatically, enabling the company to easily
+                        receive orders. Many of the projects were done using Google APIs and Zapier which are still being
+                    used by the company.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="leftcont">
+                    <h2>Languages</h2>
+                    <div class="firstcircle"></div>
+                    <div class="secondcircle"></div>
+                </div>
+                <div class="rightcont">
+                    <div class="10">English</div>
+                    <div class="10">Korean</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="leftcont">
+                    <h2>Hobbies</h2>
+                    <div class="firstcircle"></div>
+                    <div class="secondcircle"></div>
+                </div>
+                <div class="rightcont">
+                    <div>Ceramic</div>
+                    <div>Guitar</div>
+                    <div>Metal Smithing</div>
+                    <div>Music</div>
+                    <div>Photography</div>
                 </div>
             </div>
         </div>
     </div>
+
+    <div id="screen"></div>
+    <div id="title"><h2></h2></div>
 
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/aos-master/dist/aos.js"></script>
