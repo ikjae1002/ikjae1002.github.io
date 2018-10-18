@@ -302,7 +302,19 @@ a{
     line-height: 26px;
 }
 
-.rightcont > .dates{
+.rightcont > .sub{
     opacity: 0.6;
     line-height: 50px;
+}
+
+footer{
+    padding-top: 150px;
+    font-family: Raleway, Helvetica;
+    font-size: 12px;
+    font-weight: 300;
+    margin: auto;
+}
+
+footer > p{
+    text-align: center;
 }
