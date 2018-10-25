@@ -19,7 +19,7 @@ nav{
 }
 
 h1{
-    font-family: Raleway, Helvetica;
+    font-family: "Montserrat", Helvetica;
     font-weight: 300;
     font-size: 30px;
     letter-spacing: 4px;
@@ -38,7 +38,7 @@ ul{
 li{
     list-style: none;
     margin-top: 18px;
-    font-family: Raleway, Helvetica;
+    font-family: "Montserrat", Helvetica;
     font-size: 20px;
     font-weight: 300;
     letter-spacing: 4px;
@@ -94,7 +94,7 @@ a{
 }
 
 #cont1 > h2{
-    font-family: Raleway, Helvetica;
+    font-family: "Montserrat", Raleway, Helvetica;
     font-size: 75px;
     font-weight: 600;
     color: #333;
@@ -253,7 +253,7 @@ a{
 
 #name{
     text-align: center;
-    font-family: Montserrat, Raleway;
+    font-family: "Montserrat", Raleway;
     font-size: 70px;
     font-weight: 400;
     color: white;
