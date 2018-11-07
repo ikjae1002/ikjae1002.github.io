@@ -1,5 +1,14 @@
 // Javascript for CSS
-AOS.init();
+$(window).on('resize', function () { AOS.refresh(); });
+$(window).on('load', function() { setTimeout(AOS.refreshHard, 150); });
+
+$(document).ready(function () {
+    AOS.init({
+        startEvent: 'load',
+        easing: 'ease-in-out-quart',
+        duration: 600,  once: false });
+});
+
 var myname = document.querySelector("h1");
 var navigate = document.querySelectorAll("li");
 var time = 1000;
@@ -30,6 +39,61 @@ for(var i = 0; i < 11; i++){
             $('.' + i.toString()).append(appendClass);
         }
     }
+}
+
+var coverDesc = {
+    'memento': ['01', 'Memento', 'Photos of Everyday Journey'],
+    'beach': ['02', 'Beach', 'Beach Party'],
+    'lake': ['03', 'Lake George', 'Family Hour'],
+    'glamping': ['04', 'Glamping', 'Last of Summer'],
+    'maine': ['05', 'Maine', 'Journey With Friends']
+};
+
+var mementoDesc = {
+    'The Eclipse': 'New York',
+    'Jacob Hashimoto': 'New York',
+    'Subway Surfer': 'New York',
+    'City of Friends': 'New York',
+    'Hangers': 'Brookyln',
+    'Love Me': 'Brooklyn',
+    'Friends With Style': 'Brooklyn',
+    'GTR': 'Brooklyn',
+    'Rowing': 'Brooklyn',
+    'Chelsea': 'New York',
+    'Williamsburg Bridge': 'Brooklyn',
+    'Forest Point': 'Brooklyn',
+    'Lights': 'Brooklyn'
+};
+
+function subpage(where){
+    var count = 0;
+    var newCover = $('<div></div>').attr('id', 'cover');
+    var coverLetter = $('<div></div>').attr('id', 'letter');
+    coverLetter.append($('<p class="coverletter">' + coverDesc[where][0] + '</p>'));
+    coverLetter.append($('<p class="coverletter">' + coverDesc[where][1] + '</p>'));
+    coverLetter.append($('<p class="coverletter" id="coverdesc">' + coverDesc[where][2] + '</p>'));
+
+    newCover.css({'background': 'url("images/' + where + '/cover.jpg") center center no-repeat', 'background-size': 'cover'});
+    newCover.append(coverLetter);
+    $('#sub').append(newCover);
+    var frameContents = $('<div></div>').attr('id', 'framecontents');
+    for(var key in mementoDesc){
+        console.log(key);
+        var frame = $('<div class="frame"></div>');
+        frame.css({'background': 'url("images/' + where + '/' + count + '.jpg") center center no-repeat', 'background-size': 'contain'});
+        var frameDesc;
+        if(where === 'memento'){
+            frameDesc = $('<div class="frameDesc"><p class="frameDescLines">' + key + '</p><p class="frameDescLines">' + mementoDesc[key] + '</p></div>');
+        }
+        var frameconnector = $('<div class="connector"></div>');
+        frameContents.append(frame);
+        frameContents.append(frameDesc);
+        if(Object.keys(mementoDesc).length !== count + 1) {
+            frameContents.append(frameconnector);
+        }
+        count++;
+    }
+    $('#sub').append(frameContents);
 }
 
 //jquery for CSS
@@ -74,4 +138,85 @@ $('#two').click(function (e) {
     setTimeout(function(){
         window.location = goTo;
     }, 3500);
+});
+
+$('.images').click(function (e) {
+    e.preventDefault();
+    var id = $(this).attr('id');
+    $('#maincontent').fadeOut(function(){
+        $(this).css({'visibility': 'hidden', 'opacity': '0.0'});
+    });
+    subpage(id);
+    $('#sub').css({'visibility': 'visible', 'display': 'block'});
+    setTimeout(function() {
+        var clickbutton = $('<a id="clickback" href="#"></a>');
+        var backbutton = $('<div></div>').attr('id', 'backbtn');
+        clickbutton.append(backbutton);
+        $('#sub').append(clickbutton);
+        $(window).scrollTop(0);
+        $('#sub').animate({opacity: '1.0'}, 1000);
+        $('.lists').animate({opacity: '0'}, 400, function(){
+            $(this).css({'visibility': 'hidden'});
+        });
+        $('#active').animate({marginTop: '-15px'}, 100);
+        setTimeout(function(){
+            $('#backbtn').animate({opacity: '1.0'},500);
+            $('#slide').animate({width: '98%'}, 1000);
+        },300);
+    }, 500);
+    $(window).refresh;
+});
+
+$(document).on('click', '#clickback', function(e){
+    e.preventDefault();
+    $('#sub').fadeOut(function(){
+        $(this).css({'visibility': 'hidden', 'opacity': '0.0'});
+        $(this).empty();
+    });
+    $('#maincontent').css({'visibility': 'visible'});
+    setTimeout(function() {
+        $('#maincontent').css({'display': 'block'});
+        $('#maincontent').animate({opacity: '1.0'}, 1000);
+        $('.lists').css({'visibility': 'visible'});
+        $('#slide').animate({width: '234px'}, 1000);
+        setTimeout(function(){
+            $('.lists').animate({opacity: '1.0'}, 400);
+            $('#active').animate({marginTop: '5px'}, 200);
+        },1000);
+    }, 500);
+});
+
+$(window).on('scroll', function(){
+    var calc = ($('#background').height() - $(window).scrollTop()) / $('#background').height();
+    $('#background').css({'opacity': calc});
+    if(calc > 1){
+        $('#background').css({'opacity': '1'});
+    }else if(calc < 0){
+        $('#background').css({'opacity': '0'});
+    }
+    var calculate = ($('#cover').height() - $(window).scrollTop()) / $('#cover').height();
+    $('#cover').css({'opacity': calculate});
+    if(calculate > 1){
+        $('#cover').css({'opacity': '1'})
+    }else if(calculate < 0){
+        $('#cover').css({'opacity': '0'})
+    }
+
+    $('.frameDescLines').each(function(){
+        if($(window).scrollTop() + $(window).height() > $(this).offset().top){
+            $(this).animate({opacity: '1.0'}, 1000);
+        }
+    });
+
+    $('.frame').each(function(){
+        if($(window).scrollTop() + $(window).height() > $(this).offset().top){
+            $(this).animate({opacity: '1.0'}, 1000);
+        }
+    });
+
+    $('.connector').each(function(){
+        if($(window).scrollTop() + $(window).height() > $(this).offset().top){
+            $(this).animate({opacity: '1.0'}, 1000);
+        }
+    });
 });
