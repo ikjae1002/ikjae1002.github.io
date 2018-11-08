@@ -1,6 +1,0 @@
-images:
-	url:0.jpg, description: The Eclipse, horizontal: true
-images:
-	url:1.jpg, description: Jacob Hashimoto, horizontal: true
-images:
-	url:2.jpg, description: Subway Surfer, horizontal: false
