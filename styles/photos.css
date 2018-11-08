@@ -417,3 +417,13 @@ strong{
     margin-bottom: 50px;
     opacity: 0;
 }
+
+.footer{
+    font-family: "Cutive Mono", Raleway;
+    font-size: 10px;
+    margin: auto;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    text-align: center;
+}

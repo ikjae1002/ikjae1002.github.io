@@ -1,13 +1,5 @@
 // Javascript for CSS
-$(window).on('resize', function () { AOS.refresh(); });
-$(window).on('load', function() { setTimeout(AOS.refreshHard, 150); });
-
-$(document).ready(function () {
-    AOS.init({
-        startEvent: 'load',
-        easing: 'ease-in-out-quart',
-        duration: 600,  once: false });
-});
+AOS.init();
 
 var myname = document.querySelector("h1");
 var navigate = document.querySelectorAll("li");
@@ -26,19 +18,6 @@ setTimeout(changeProperty,500,myname);
 for(var i = 0; i<navigate.length; i++){
     setTimeout(changeProperty,time,navigate[i]);
     time += 400;
-}
-
-for(var i = 0; i < 11; i++){
-    if($('div').hasClass(i.toString())){
-        console.log($('.' + i.toString()));
-        for(var j = 0; j < 10 - i; j++){
-            var appendClass = $('<div></div>').addClass("empty");
-            $('.' + i.toString()).append(appendClass);
-        }for(var j = 0; j < i; j++){
-            var appendClass = $('<div></div>').addClass("fill");
-            $('.' + i.toString()).append(appendClass);
-        }
-    }
 }
 
 var coverDesc = {
@@ -65,7 +44,7 @@ var mementoDesc = {
     'Lights': 'Brooklyn'
 };
 
-var beachDesc ={
+var beachDesc = {
     'What are you thinking about?': 'New York',
     'Mojito': 'New York',
     'Sunny gang': 'New York',
@@ -78,15 +57,49 @@ var beachDesc ={
 };
 
 var lakeDesc = {
-
+    'Island for riches': 'Lake George',
+    'Wooden Bridge': 'Crandall Park',
+    'Rest area': 'Crandall Park',
+    'A chair': 'Crandall Park',
+    'Closer to fire': 'Lake George',
+    '60 Parasail': 'Lake George',
+    'Reflection': 'Lake George',
+    'Bright Night': 'Lake George',
+    'Flower': 'Lake George',
+    'Another Flower': 'Lake George'
 };
 
 var glampingDesc = {
-
+    'Kitchen light': 'A Tiny House Resort',
+    'Baby goat': 'A Tiny House Resort',
+    'White hair': 'A Tiny House Resort',
+    'Making memories': 'A Tiny House Resort',
+    'Stuck': 'A Tiny House Resort',
+    'Tree': 'A Tiny House Resort',
+    'Fall': 'Catskill',
+    'Friends': 'Catskill',
+    "What's down there?": 'Catskill',
+    'Blue sunlight': 'Catskill'
 };
 
 var maineDesc = {
-
+    'Road Trip': 'Along the way',
+    'Beach boys': 'Charlestown, Rhode Island',
+    'Light house': 'Cape Elizabeth, Maine',
+    'Two tones': 'Two Lights, Maine',
+    'Rocky roads': 'Two Lights, Maine',
+    'Water flowers': 'Two Lights, Maine',
+    'Yay': 'Two Lights, Maine',
+    'Tall as light house': 'Two Lights, Maine',
+    'Grey': 'Two Lights, Maine',
+    'Window of the Ocean': 'Two Lights, Maine',
+    'Sail man': 'South Port, Maine',
+    'Remnant of ships': 'South Port, Maine',
+    'Container art': 'South Port, Maine',
+    'Seaweeds': 'East End Beach, Maine',
+    'New Heaven': 'Sandy Point Bird Sanctuary, Connecticut',
+    'Looking for birds': 'Sandy Point Bird Sanctuary, Connecticut',
+    'Stiff stature': 'Sandy Point Bird Sanctuary, Connecticut'
 };
 
 function subpage(where){
@@ -127,51 +140,52 @@ function subpage(where){
         }
         count++;
     }
+    frameContents.append($('<div class="footer">All pictures by Joshua Jung</div>'))
     $('#sub').append(frameContents);
 }
 
 //jquery for CSS
 
-$('#screen').animate({height: '0px'}, 1000);
+$('#screen').animate({height: '0px'}, 500);
 
 $('#one').click(function (e) {
     e.preventDefault();
     var goTo = "home.html";
 
     $('#screen').css({'background-color': '#d0b783','z-index': '11', 'margin-top': '-800px', 'overflow': 'visible'});
-    $('#screen').animate({height: '2000px'}, 3000);
+    $('#screen').animate({height: '2000px'}, 1500);
     $('#title').css({'text-align': 'center', 'top': '50%','left': '50%', 'transform': 'translate(-50%, -50%)', 'height': '100vh', 'position': 'fixed', 'z-index': '12'});
     $('h2').text('Home');
-    $('h2').css({'opacity': '0', 'color': 'black', 'font-family': 'Raleway, Helvetica', 'font-size': '3em', 'font-weight': '300', 'top': '50%','left': '50%', 'transform': 'translate(-50%, -50%)', 'position': 'absolute', 'margin': '0'});
+    $('h2').css({'opacity': '0', 'color': 'white', 'font-family': 'Raleway, Helvetica', 'font-size': '3em', 'font-weight': '300', 'top': '50%','left': '50%', 'transform': 'translate(-50%, -50%)', 'position': 'absolute', 'margin': '0'});
     setTimeout(function() {
-        $('h2').animate({opacity: '1'}, 1000);
+        $('h2').animate({opacity: '1'}, 400);
         setTimeout(function(){
-            $('h2').animate({opacity: '0'}, 1000);
-        }, 500);
-    }, 2000);
+            $('h2').animate({opacity: '0'}, 400);
+        }, 1000);
+    }, 1000);
     setTimeout(function(){
         window.location = goTo;
-    }, 3500);
+    }, 2500);
 });
 
 $('#two').click(function (e) {
     e.preventDefault();
     var goTo = "about.html";
 
-    $('#screen').css({'background-color': '#f96161','z-index': '5', 'margin-top': '-800px', 'overflow': 'visible'});
-    $('#screen').animate({height: '2000px'}, 3000);
-    $('#title').css({'text-align': 'center', 'top': '50%','left': '50%', 'transform': 'translate(-50%, -50%)', 'height': '100vh', 'position': 'fixed', 'z-index': '6'});
+    $('#screen').css({'background-color': '#f96161','z-index': '11', 'margin-top': '-800px', 'overflow': 'visible'});
+    $('#screen').animate({height: '2000px'}, 1500);
+    $('#title').css({'text-align': 'center', 'top': '50%','left': '50%', 'transform': 'translate(-50%, -50%)', 'height': '100vh', 'position': 'fixed', 'z-index': '12'});
     $('h2').text('About');
-    $('h2').css({'opacity': '0', 'color': 'black', 'font-family': 'Raleway, Helvetica', 'font-size': '3em', 'font-weight': '300', 'top': '50%','left': '50%', 'transform': 'translate(-50%, -50%)', 'position': 'absolute', 'margin': '0'});
+    $('h2').css({'opacity': '0', 'color': 'white', 'font-family': 'Raleway, Helvetica', 'font-size': '3em', 'font-weight': '300', 'top': '50%','left': '50%', 'transform': 'translate(-50%, -50%)', 'position': 'absolute', 'margin': '0'});
     setTimeout(function() {
-        $('h2').animate({opacity: '1'}, 1000);
+        $('h2').animate({opacity: '1'}, 400);
         setTimeout(function(){
-            $('h2').animate({opacity: '0'}, 1000);
-        }, 500);
-    }, 2000);
+            $('h2').animate({opacity: '0'}, 400);
+        }, 1000);
+    }, 1000);
     setTimeout(function(){
         window.location = goTo;
-    }, 3500);
+    }, 2500);
 });
 
 $('.images').click(function (e) {
@@ -237,19 +251,19 @@ $(window).on('scroll', function(){
     }
 
     $('.frameDescLines').each(function(){
-        if($(window).scrollTop() + $(window).height() > $(this).offset().top){
+        if($(window).scrollTop() + $(window).height() - 50 > $(this).offset().top){
             $(this).animate({opacity: '1.0'}, 1000);
         }
     });
 
     $('.frame').each(function(){
-        if($(window).scrollTop() + $(window).height() > $(this).offset().top){
+        if($(window).scrollTop() + $(window).height() - 50 > $(this).offset().top){
             $(this).animate({opacity: '1.0'}, 1000);
         }
     });
 
     $('.connector').each(function(){
-        if($(window).scrollTop() + $(window).height() > $(this).offset().top){
+        if($(window).scrollTop() + $(window).height() - 50 > $(this).offset().top){
             $(this).animate({opacity: '1.0'}, 1000);
         }
     });
