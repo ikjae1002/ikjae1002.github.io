@@ -65,6 +65,30 @@ var mementoDesc = {
     'Lights': 'Brooklyn'
 };
 
+var beachDesc ={
+    'What are you thinking about?': 'New York',
+    'Mojito': 'New York',
+    'Sunny gang': 'New York',
+    'Hazy': 'New York',
+    'The Other Side': 'New York',
+    'Dazed by waves': 'New York',
+    'Splendor of ocean': 'New York',
+    'Standing shadow': 'New York',
+    'Bohemian': 'New York'
+};
+
+var lakeDesc = {
+
+};
+
+var glampingDesc = {
+
+};
+
+var maineDesc = {
+
+};
+
 function subpage(where){
     var count = 0;
     var newCover = $('<div></div>').attr('id', 'cover');
@@ -73,22 +97,32 @@ function subpage(where){
     coverLetter.append($('<p class="coverletter">' + coverDesc[where][1] + '</p>'));
     coverLetter.append($('<p class="coverletter" id="coverdesc">' + coverDesc[where][2] + '</p>'));
 
-    newCover.css({'background': 'url("../images/' + where + '/cover.jpg") center center no-repeat', 'background-size': 'cover'});
+    newCover.css({'background': 'url("images/' + where + '/cover.jpg") center center no-repeat', 'background-size': 'cover'});
     newCover.append(coverLetter);
     $('#sub').append(newCover);
     var frameContents = $('<div></div>').attr('id', 'framecontents');
-    for(var key in mementoDesc){
+    var album;
+    if(where === 'memento'){
+        album = mementoDesc;
+    }else if(where === 'beach'){
+        album = beachDesc;
+    }else if(where === 'lake'){
+        album = lakeDesc;
+    }else if(where === 'glamping'){
+        album = glampingDesc;
+    }else{
+        album = maineDesc;
+    }
+    for(var key in album){
         console.log(key);
         var frame = $('<div class="frame"></div>');
-        frame.css({'background': 'url("../images/' + where + '/' + count + '.jpg") center center no-repeat', 'background-size': 'contain'});
+        frame.css({'background': 'url("images/' + where + '/' + count + '.jpg") center center no-repeat', 'background-size': 'contain'});
         var frameDesc;
-        if(where === 'memento'){
-            frameDesc = $('<div class="frameDesc"><p class="frameDescLines">' + key + '</p><p class="frameDescLines">' + mementoDesc[key] + '</p></div>');
-        }
+        frameDesc = $('<div class="frameDesc"><p class="frameDescLines">' + key + '</p><p class="frameDescLines">' + album[key] + '</p></div>');
         var frameconnector = $('<div class="connector"></div>');
         frameContents.append(frame);
         frameContents.append(frameDesc);
-        if(Object.keys(mementoDesc).length !== count + 1) {
+        if(Object.keys(album).length !== count + 1) {
             frameContents.append(frameconnector);
         }
         count++;

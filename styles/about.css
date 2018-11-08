@@ -322,3 +322,11 @@ footer > p{
 strong{
     font-weight: 400;
 }
+
+.numbers{
+    font-family: "Montserrat", Raleway;
+    font-size: 24px;
+    font-weight: 400;
+    color: #f96161;
+    margin-top: 10px;
+}
