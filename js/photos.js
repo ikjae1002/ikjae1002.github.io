@@ -73,14 +73,14 @@ function subpage(where){
     coverLetter.append($('<p class="coverletter">' + coverDesc[where][1] + '</p>'));
     coverLetter.append($('<p class="coverletter" id="coverdesc">' + coverDesc[where][2] + '</p>'));
 
-    newCover.css({'background': 'url("images/' + where + '/cover.jpg") center center no-repeat', 'background-size': 'cover'});
+    newCover.css({'background': 'url("../images/' + where + '/cover.jpg") center center no-repeat', 'background-size': 'cover'});
     newCover.append(coverLetter);
     $('#sub').append(newCover);
     var frameContents = $('<div></div>').attr('id', 'framecontents');
     for(var key in mementoDesc){
         console.log(key);
         var frame = $('<div class="frame"></div>');
-        frame.css({'background': 'url("images/' + where + '/' + count + '.jpg") center center no-repeat', 'background-size': 'contain'});
+        frame.css({'background': 'url("../images/' + where + '/' + count + '.jpg") center center no-repeat', 'background-size': 'contain'});
         var frameDesc;
         if(where === 'memento'){
             frameDesc = $('<div class="frameDesc"><p class="frameDescLines">' + key + '</p><p class="frameDescLines">' + mementoDesc[key] + '</p></div>');
