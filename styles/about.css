@@ -1,0 +1,452 @@
+html{
+	height: 100%;
+}
+
+body{
+	margin: auto;
+	width: 100%;
+	position: relative;
+	background-color: #F7F7F7;
+}
+
+#topbar{
+	top: 0;
+	position: absolute;
+	width: 100%;
+	display: block;
+	overflow: auto;
+	height: auto;
+	z-index: 10;
+}
+
+#heading{
+	position: relative;
+	left: 40px;
+	padding-top: 43px;
+	float: left;
+}
+
+#heading > h1{
+	font-family: 'Libre Franklin', Helvetica;
+	font-size: 22px;
+	font-weight: 300;
+	color: black;
+	margin: 0;
+	/*text-shadow: -1px -1px 0 white,
+				 1px -1px 0 white,
+				 -1px 1px 0 white,
+				 1px 1px 0 white;*/
+}
+
+nav{
+	position: relative;
+	right: 15px;
+	padding-top: 35px;
+	float: right;
+}
+
+li{
+	list-style: none;
+	float: left;
+	margin-right: 25px;
+	margin-left: 20px;
+	font-family: 'Libre Franklin', Raleway;
+	font-weight: 200;
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: black;
+}
+
+.underline{
+	height: 1px;
+	background-color: lightgray;
+	overflow: hidden;
+}
+
+.fillline{
+	left: -60px;
+	height: 1px;
+	background-color: black;
+	position: relative;
+	transition-property: left;
+	transition-duration: .3s;
+}
+
+li:hover .underline > .fillline{
+	left: 0px;
+}
+
+main{
+	clear: both;
+	width: 100%;
+	padding-top: 113px;
+	position: relative;
+	padding-bottom: 350px;
+	min-height: 400px;
+}
+
+#bio{
+	width: 80%;
+	margin: auto;
+	height: calc(100vh - 113px);
+	position: relative;
+	/*overflow: hidden;*/
+}
+
+#bioleft{
+	text-orientation: right;
+	width: 50%;
+	font-family: 'Libre Franklin', Helvetica;
+	font-weight: 200;
+	font-size: 2.5vw;
+	letter-spacing: .1vw;
+	position: relative;
+	z-index: 2;
+	min-height: 100px;
+	margin: 0px;
+	float: left;
+}
+
+.cover{
+	position: absolute;
+	left: 0;
+	background-color: rgb(20,20,20);
+	height: 100%;
+}
+
+#name1, #name2{
+	font-family: 'Merriweather', Helvetica;
+	font-size: 4vw;
+	letter-spacing: .2vw;
+	font-weight: 400;
+}
+
+#name1, #name2, #first, #second, #third, #fourth{
+	display: inline-block;
+	position: relative;
+	color: #F7F7F7;
+	margin-top: 1.5vh;
+}
+
+#bioright{
+	position: relative;
+	right: 0;
+	width: 30%;
+	z-index: 1;
+	float: right;
+}
+
+#profile{
+	background: url('../images/portrait2.JPG') center top no-repeat;
+	background-size: contain;
+	width: 30vw;
+	height: 60vh;
+	position: relative;
+	margin-left: -150px;
+	z-index: 10;
+	opacity: .9;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#arrow{
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%) rotate(45deg);
+	height: 20px;
+	width: 20px;
+	border-bottom: rgb(30,30,30) 2px solid;
+	border-right: rgb(30,30,30) 2px solid;
+	border-radius: 2px;
+	position: absolute;
+	animation: bounce 1.5s alternate ease-out infinite;
+}
+
+@keyframes bounce{
+	0% {bottom: 30px;}
+	80% {bottom: 30px;}
+	90% {bottom: 36px;}
+	100% {bottom: 40px;}
+}
+
+#contents{
+	position: relative;
+	width: 90%;
+	height: auto;
+	display: table;
+	margin: auto;
+}
+
+.row{
+	position: relative;
+	height: auto;
+	overflow: hidden;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+#who{
+
+	position: relative;
+	text-align: center;
+	font-family: "Merriweather", Raleway;
+	font-size: 4vw;
+	margin-top: 50px;
+	letter-spacing: .2vw;
+	margin-bottom: 100px;
+}
+
+.titleRow{
+	width: 40%;
+	position: relative;
+	float: left;
+}
+
+.title{
+	display: inline-block;
+	position: relative;
+	color: #F7F7F7;
+	font-family: 'Merriweather', Raleway;
+	font-size: 3vw;
+	font-weight: 400;
+	letter-spacing: .2vw;
+	margin-left: 10%;
+}
+
+.cover{
+	position: absolute;
+	left: 0;
+	background-color: black;
+	height: 100%;
+}
+
+.description{
+	position: relative;
+	float: left;
+	color: rgb(20,20,20);
+	font-family: 'Libre Franklin', Raleway;
+	width: 60%;
+}
+
+#ed > h2{
+	margin-top: 0;
+	margin-bottom: 0;
+	/*font-size: 2.8vw;*/
+	font-size: 33px;
+	font-weight: 200;
+	letter-spacing: .2vw;
+}
+
+#ed > h5{
+	margin-top: 0px;
+	margin-bottom: 0;
+	/*font-size: 2vw;*/
+	font-size: 27px;
+	font-weight: 100;
+	letter-spacing: .2vw;
+}
+
+#ed > h3{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/*font-size: 1.3vw;*/
+	font-size: 17px;
+	font-weight: 100;
+	letter-spacing: .1vw;
+}
+
+#ed > h4{
+	margin-top: 5px;
+	/*font-size: 1.3vw;*/
+	font-size: 17px;
+	font-weight: 200;
+	letter-spacing: .1vw;
+}
+
+#ex > h2{
+	margin-top: 0;
+	margin-bottom: 0;
+	/*font-size: 2.8vw;*/
+	font-size: 33px;
+	font-weight: 200;
+	letter-spacing: .2vw;
+}
+
+#ex > h3{
+	margin-top: 0px;
+	margin-bottom: 0;
+	/*font-size: 2vw;*/
+	font-size: 27px;
+	font-weight: 100;
+	letter-spacing: .2vw;
+}
+
+#ex > h4{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/*font-size: 1.3vw;*/
+	font-size: 17px;
+	font-weight: 100;
+	letter-spacing: .1vw;
+}
+
+#ex > h5{
+	margin-top: 0;
+	/*font-size: 1.3vw;*/
+	font-size: 17px;
+	font-weight: 200;
+	letter-spacing: .1vw;
+}
+
+#skills{
+	position: relative;
+}
+
+.skilltitle{
+	float: left;
+	position: relative;
+	width: 30%;
+	/*font-size: 1.8vw;*/
+	font-size: 20px;
+	font-weight: 200;
+}
+
+.skillRow{
+	position: relative;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+
+.skilllevel{
+	right: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	position: absolute;
+	float: right;
+	width: 70%;
+}
+
+.skillbarfull{
+	height: 2px;
+	background-color: lightgray;
+	position: relative;
+	width: 100%;
+}
+
+.skillbar{
+	left: 0;
+	position: absolute;
+	display: inline-block;
+	background-color: black;
+	width: 0%;
+	height: 100%;
+	transition: all 1.5s ease-out;
+}
+
+#loading{
+	width: 100%;
+  	height: 100%;
+   	top: 0;
+   	left: 0;
+   	position: fixed;
+   	display: block;
+   	opacity: 1;
+   	background-color: #fff;
+   	z-index: 99;
+   	text-align: center;
+}
+
+#spinningbar{
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	height: 5px;
+  	border-radius: 2px;
+  	background-color: black;
+  	width: 40px;
+  	z-index: 100;
+  	animation: spin .7s ease-in-out infinite;
+}
+
+@keyframes spin{
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(180deg);}
+}
+
+footer{
+	clear: both;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 250px;
+	background-color: rgb(235,235,235);
+}
+
+#footercontent{
+	width: 70%;
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+.columns{
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	float: left;
+}
+
+#footerheading{
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 30px;
+	color: black;
+	font-weight: 100;
+	margin-top: 20px;
+}
+
+#info > p{
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 13px;
+	color: black;
+	font-weight: 300;
+	opacity: .7;
+	letter-spacing: 2px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+#info > a{
+	text-decoration: none;
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 13px;
+	letter-spacing: 2px;
+	font-weight: 300;
+	color: black;
+	opacity: .7;
+}
+
+#links > p{
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 13px;
+	color: black;
+	font-weight: 300;
+	opacity: .7;
+	letter-spacing: 2px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+#links > a{
+	text-decoration: none;
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 13px;
+	letter-spacing: 2px;
+	font-weight: 300;
+	color: black;
+	opacity: .7;
+	padding-bottom: 8px;
+	display: inline-block;
+}
