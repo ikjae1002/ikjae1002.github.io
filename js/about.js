@@ -19,7 +19,7 @@ function delay(URL){
 
 //Animating letters
 var titles = [false, false, false];
-var widths = ['70%', '95%', '95%', '90%', '90%', '60%', '65%', '70%', '40%', '60%'];
+var widths = ['70%', '95%', '95%', '90%', '90%', '60%', '65%', '70%', '40%', '65%', '60%'];
 
 function start(){
 	animateLetters($('#name1'));
@@ -31,11 +31,11 @@ function start(){
 }
 
 function animateLetters(ele){
-	ele.find('.cover').animate({'width': '100%'},500, function(){
+	ele.find('.cover').animate({'width': '100%'},600, function(){
 		$(this).css({'left': 'auto', 'right': '0'});
 		setTimeout(function() {
 			ele.css({'color': 'rgb(20,20,20)'})
-			ele.find('.cover').animate({'width': '0%'}, 500);
+			ele.find('.cover').animate({'width': '0%'}, 600);
 		}, 100);
 	})
 }

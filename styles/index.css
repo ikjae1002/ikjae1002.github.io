@@ -95,137 +95,77 @@ main{
 	position: relative;
 }
 
-#left{
-	display: inline-block;
-	font-family: 'Cutive Mono', Raleway;
-	font-size: 1vw;
-	text-orientation: center;
-	top: 50%;
-	transform: translateY(-50%) rotate(-90deg);
-	float: left;
-	left: 0px;
-	position: absolute;
-}
-
 #background{
 	background: url('../images/background.jpg') center center no-repeat;
 	background-size: cover;
-	width: 80%;
-	padding-top: 54.39%;
+	width: 90%;
+	height: 80vh;
 	margin: auto;
 	/*margin-top: 150px;*/
 	z-index: 5;
 	position: relative;
 }
 
-#right{
-	display: inline-block;
-	font-family: 'Cutive Mono', Raleway;
-	font-size: 1vw;
-	text-orientation: center;
-	transform: translateY(-50%) rotate(90deg);
-	float: left;
-	right: 2%;
-	top: 50%;
-	position: absolute;
-}
-
-#horizontalLine{
-	height: 1px;
-	background-color: black;
-	width: 87%;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%,-50%);
-	z-index: 1;
-	margin: auto;
-	position: absolute;
-}
-
-#background > h1{
-	font-family: 'Cutive Mono', Raleway;
-	font-weight: 300;
-	font-size: 55px;
-	letter-spacing: -3px;
-	position: absolute;
-	padding-top: 25.20%;
-	margin-top: 0px;
-}
-
-#vertical{
-	width: 40%;
+#headline{
+	width: 80%;
 	left: 10%;
 	right: 10%;
 	position: relative;
-	overflow: visible;
 	margin-top: 0;
-	float: left;
 }
 
-.cover{
+/*#cover{
 	position: absolute;
-	left: 0;
+	width: : 100%;
+	height: 50%;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
 	background-color: rgb(20,20,20);
-	height: 100%;
+}*/
+
+#test{
+	position: absolute;
+	width: 100%;
+	height: 0%;
+	left: 50%;
+	top: 0;
+	transform: translateX(-50%);
+	background-color: rgb(20,20,20);
+
 }
 
 #first{
 	/*writing-mode: vertical-rl;
 	text-orientation: mixed;*/
+	text-align: center;
 	display: inline-block;
 	margin-top: 100px;
 	position: relative;
 	font-family: 'Merriweather', Raleway;
-	font-size: 4vw;
+	font-size: 36px;
 	color: white;
 }
 
-#second{
-	display: inline-block;
-	margin-top: 1.4vh;
-	opacity: 1;
-	position: relative;
-	font-family: 'Merriweather', Raleway;
-	font-size: 4vw;
-	color: white;
-}
-
-#third{
-	/*writing-mode: vertical-rl;
-	text-orientation: mixed;*/
-	display: inline-block;
-	margin-top: 1.4vh;
-	opacity: 1;
-	position: relative;
-	font-family: 'Merriweather', Raleway;
-	font-size: 4vw;
-	color: white;
-}
-
-#fourth{
-	/*writing-mode: vertical-rl;
-	text-orientation: mixed;*/
-	display: inline-block;
-	margin-top: 1.4vh;
-	opacity: 1;
-	position: relative;
-	font-family: 'Merriweather', Raleway;
-	font-size: 4vw;
-	color: white;
-}
-
-#rightside{
-	width: 40%;
-	right: 10%;
+#descriptions{
+	width: 90%;
 	margin: 0;
+	left: 50%;
+	transform: translateX(-50%);
 	position: relative;
-	margin-top: 100px;
+	margin-top: 80px;
 	font-family: 'Libre Franklin', Raleway;
-	font-size: 18px;
+	font-size: 15px;
 	font-weight: 300;
 	line-height: 35px;
 	letter-spacing: 1px;
-	float: right;
+}
+
+.descColumns{
+	float: left;
+	width: 26.67%;
+	padding-left: 3.33%;
+	padding-right: 3.33%;
 }
 
 #rightside > p{
@@ -278,7 +218,7 @@ footer{
 	bottom: 0;
 	width: 100%;
 	height: 250px;
-	background-color: rgb(20,20,20);
+	background-color: rgb(240,240,240);
 }
 
 #footercontent{
@@ -300,7 +240,7 @@ footer{
 #footerheading{
 	font-family: 'Libre Franklin', Raleway;
 	font-size: 30px;
-	color: white;
+	/*color: white;*/
 	font-weight: 100;
 	margin-top: 20px;
 	/*text-shadow: -1px -1px 0 white,
@@ -312,7 +252,7 @@ footer{
 #info > p{
 	font-family: 'Libre Franklin', Raleway;
 	font-size: 13px;
-	color: white;
+	/*color: white;*/
 	font-weight: 300;
 	opacity: .7;
 	letter-spacing: 2px;
@@ -326,14 +266,14 @@ footer{
 	font-size: 13px;
 	letter-spacing: 2px;
 	font-weight: 300;
-	color: white;
+	/*color: white;*/
 	opacity: .7;
 }
 
 #links > p{
 	font-family: 'Libre Franklin', Raleway;
 	font-size: 13px;
-	color: white;
+	/*color: white;*/
 	font-weight: 300;
 	opacity: .7;
 	letter-spacing: 2px;
@@ -347,7 +287,7 @@ footer{
 	font-size: 13px;
 	letter-spacing: 2px;
 	font-weight: 300;
-	color: white;
+	/*color: white;*/
 	opacity: .7;
 	padding-bottom: 8px;
 	display: inline-block;

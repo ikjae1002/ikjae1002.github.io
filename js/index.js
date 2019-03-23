@@ -2,16 +2,16 @@
 
 //Cover action
 var first = {name: "#first", trigger: false};
-var second = {name: "#second", trigger: false};
-var third = {name: "#third", trigger: false};
-var fourth = {name: "#fourth", trigger: false};
+// var second = {name: "#second", trigger: false};
+// var third = {name: "#third", trigger: false};
+// var fourth = {name: "#fourth", trigger: false};
 
 $(window).scroll(function(){
 	if($('#first').offset().top + 300 < $(this).scrollTop() + $(window).height()){
 		animateLetters(first);
-		setTimeout(animateLetters, 300, second);
-		setTimeout(animateLetters, 600, third);
-		setTimeout(animateLetters, 900, fourth);
+		// setTimeout(animateLetters, 300, second);
+		// setTimeout(animateLetters, 600, third);
+		// setTimeout(animateLetters, 900, fourth);
 	}
 });
 
@@ -27,10 +27,11 @@ function animateLetters(ele){
 		ele.trigger = true;
 		var what = $(ele.name).children()[0];
 		console.log(what);
-		$(what).animate({'width': '100%'}, 400, function(){
+		$(what).animate({'height': '100%'}, 500, function(){
 			$(ele.name).css({'color': 'rgb(20,20,20)'});
-			$(this).css({'left': 'auto', 'right': '0'});
-			setTimeout(function() {$(what).animate({'width': '0%'}, 400);}, 100);
+			$(this).css({'top': 'auto'});
+			setTimeout(function() {$(what).animate({'height': '4px', 'border-radius': '4px', 'bottom': '-45px'}, 500);}, 100);
+			setTimeout(function() {$(what).animate({'width': '50px'}, 500);}, 600);
 		});
 	}
 }
