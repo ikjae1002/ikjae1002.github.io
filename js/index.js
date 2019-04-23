@@ -27,10 +27,10 @@ function animateLetters(ele){
 		ele.trigger = true;
 		var what = $(ele.name).children()[0];
 		console.log(what);
-		$(what).animate({'height': '100%'}, 500, function(){
+		$(what).animate({'height': '150%'}, 500, function(){
 			$(ele.name).css({'color': 'rgb(20,20,20)'});
 			$(this).css({'top': 'auto'});
-			setTimeout(function() {$(what).animate({'height': '4px', 'border-radius': '4px', 'bottom': '-45px'}, 500);}, 100);
+			setTimeout(function() {$(what).animate({'height': '4px', 'border-radius': '4px', 'bottom': '-50%'}, 500);}, 100);
 			setTimeout(function() {$(what).animate({'width': '50px'}, 500);}, 600);
 		});
 	}
@@ -83,14 +83,9 @@ function delay(URL){
 
 // Fade in for descriptions
 $(window).scroll(function(){
-	$('#rightside').children().each(function(){
+	$('.descColumns').each(function(){
 		if($(this).offset().top + 100 < $(window).scrollTop() + $(window).height()){
-			$(this).animate({marginTop: "0px", opacity: "1"}, {
-				step: function(now,fx){
-					$(this).css('transform', 'rotate(0deg)');
-				},duration: 'slow'
-			});
-
+			$(this).animate({marginTop: "0px", opacity: "1"});
 		}
 	})
 });

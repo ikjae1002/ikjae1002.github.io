@@ -24,10 +24,14 @@ var widths = ['70%', '95%', '95%', '90%', '90%', '60%', '65%', '70%', '40%', '65
 function start(){
 	animateLetters($('#name1'));
 	setTimeout(animateLetters, 300, $('#name2'));
-	setTimeout(animateLetters, 600, $('#first'));
-	setTimeout(animateLetters, 900, $('#second'));
-	setTimeout(animateLetters, 1200, $('#third'));
-	setTimeout(animateLetters, 1500, $('#fourth'));
+	setTimeout(fadingin, 500, $('#first'));
+	setTimeout(fadingin, 700, $('#second'));
+	setTimeout(fadingin, 900, $('#third'));
+	setTimeout(fadingin, 1200, $('#fourth'));
+}
+
+function fadingin(ele){
+	ele.css({'color': 'rgb(20,20,20)'});
 }
 
 function animateLetters(ele){

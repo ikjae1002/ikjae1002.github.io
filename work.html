@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Photos | Joshua Jung</title>
+		<title>Work | Joshua Jung</title>
 		<meta charset="utf-8">
-		<link href="https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400|Merriweather:300,400" rel="stylesheet">
-		<link rel="stylesheet" href="styles/photos.css">
+		<link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500|Libre+Franklin:100,200,300,400" rel="stylesheet">
+		<link rel="stylesheet" href="styles/work.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
@@ -16,29 +16,26 @@
 				<ul>
 					<a href="javascript:delay('index.html')"><li>home<div class="underline"><div class="fillline"></div></div></li></a>
 					<a href="javascript:delay('about.html')"><li>about<div class="underline" id="aboutline"><div class="fillline"></div></div></li></a>
-					<a href="javascript:delay('work.html')"><li>work<div class="underline" id="workline"><div class="fillline"></div></div></li></a>
-					<a href="#"><li>photos<div class="underline" id="photosline"><div class="fillline"></div></div></li></a>
+					<a href="#"><li>work<div class="underline" id="workline"><div class="fillline"></div></div></li></a>
+					<a href="javascript:delay('photos.html')"><li>photos<div class="underline" id="photosline"><div class="fillline"></div></div></li></a>
 				</ul>
 			</nav>
 		</div>
 
 		<main>
 			<div id="container">
-				<div id="select">
-					<ul>
-						<li><div class="letters"><div class="cover"></div><a href="#">project</a></div><div class="bars" id="first"></div></li>
-						<li><div class="letters"><div class="cover"></div><a href="#">boston</a></div><div class="bars" id="second"></div></li>
-						<li><div class="letters"><div class="cover"></div><a href="#">street</a></div><div class="bars" id="third"></div></li>
-						<li><div class="letters"><div class="cover"></div><a href="#">fourth</a></div><div class="bars" id="fourth"></div></li>
-					</ul>
+				<div id="navigator">
+					<div id="toparrow"></div>
+					<div id="number">01</div>
+					<div id="bottomarrow"></div>
 				</div>
-				<div id="frame"><div id="image"></div></div>
-			</div>
-			<div id="sub">
-				<div id="subloading">
-					<div class="spinningbar"></div>
+				<div id="frame">
+					<div id="texts">
+						<h1 id="title">FUJIFILM<br>Mock Design</h1>
+						<p id="description">Redesigned the Fujifilm website<br>into a user-friendlier design</p>
+						<a href="fuji.html"><div id="button"><div id="circle"></div><div id='buttonname'>View</div></div></a>
+					</div>
 				</div>
-				<div id="framecontents"></div>
 			</div>
 		</main>
 
@@ -70,6 +67,6 @@
 		</footer>
 
 		<script src="js/node_modules/jquery/dist/jquery.min.js"></script>
-		<script src="js/photos.js"></script>
+		<script src="js/work.js"></script>
 	</body>
 </html>

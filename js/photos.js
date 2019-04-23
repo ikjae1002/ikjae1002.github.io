@@ -21,7 +21,7 @@ function animateLetters(ele){
 	ele.find('.cover').animate({'width': '100%'},500, function(){
 		$(this).css({'left': 'auto', 'right': '0'});
 		setTimeout(function() {
-			ele.css({'color': 'black'})
+			ele.find('a').css({'color': 'black'})
 			ele.find('.cover').animate({'width': '0%'}, 500);
 		}, 100);
 	})
@@ -31,18 +31,71 @@ function hideLetters(ele){
 	ele.find('.cover').animate({'width': '100%'},500, function(){
 		$(this).css({'left': 'auto', 'right': '0'});
 		setTimeout(function() {
-			ele.css({'color': 'white'})
+			ele.find('a').css({'color': 'white'})
 			ele.find('.cover').animate({'width': '0%'}, 500);
 		}, 100);
+		ele.find('.cover').css({'left': '0', 'right': 'auto'});
 	});
-	ele.find('.cover').css({'left': '0', 'right': 'auto'});
 }
 
 // Hover functions
 
+function subpage(name){
+	var going;
+	console.log(name);
+	if(name == "project"){
+		going = project;
+	}else if(name == "boston"){
+		going = boston;
+	}else if(name == "street"){
+		going = street;
+	}else if(name == "fourth"){
+		going = fourth;
+	}
+	$('#subloading').css({'visibility':'hidden'});
+	var content = $('#framecontents');
+	var clickbutton = $('<a id="clickback" href="#"></a>');
+    var backbutton = $('<div></div>').attr('id', 'backbtn');
+    clickbutton.append(backbutton);
+    content.append(clickbutton);
+    $('#sub').css({'display': 'block'});
+    $('#backbtn').css({'opacity': '1'});
+    var framebackground = $('<div id="framebackground"></div>');
+    framebackground.css({'background': 'url("images/' + name + '/background.jpg") center center no-repeat', 'background-size': 'cover'});
+    var framebackbox = $('<div id="backbox"></div>');
+    var frameletters = $('<div id="frameletters"></div>');
+    var frametitle = $('<h1>' + name + '</h1>');
+    var framesubtitle = $('<h2>' + framedesc[name] + '</h2>');
+    frameletters.append(frametitle, framesubtitle);
+    framebackbox.append(frameletters);
+    framebackground.append(framebackbox);
+    content.append(framebackground);
+    $('#sub').animate({'opacity': '1'},300);
+}
+
+var framedesc = {
+	'project': 'Personal Experiments'
+}
+
 var project = {
-	'name': 'project',
-	'':''
+	'name': 'Project',
+	'subtitle': 'Personal Experiments',
+	'background' : '../images/project/background.jpg',
+	'1' : '../images/project/1.jpg',
+	'2' : '../images/project/2.jpg',
+	'3' : '../images/project/3.jpg'
+};
+
+var boston = {
+
+};
+
+var street = {
+
+};
+
+var fourth = {
+
 };
 
 var active = $('#first');
@@ -78,13 +131,43 @@ $('#select > ul > li').each(function(ele){
 					time += 150;
 				}
 			});
+			var where = $(this).find('a').text();
 			setTimeout(hideLetters, 1000, $('#select > ul > li').eq(ele).find('.letters'));
 			setTimeout(function(){
 				active.animate({width: '0%'}, 500);
-				setTimeout(function(){$('#container').animate({'opacity': '0'}, 500);},500);
+				setTimeout(function(){
+					$('#container').animate({'opacity': '0'}, 500);
+					$('#container').fadeOut(function(){
+						$(this).css({'visibility':'hidden'});
+						$('#sub').css({'visibility': 'visible'});
+						subpage(where);
+					});
+				},500, function(){});
 			},1000);
 		}
 	});
+});
+
+$(document).on('click', '#clickback', function(e){
+    e.preventDefault();
+    $('#sub').fadeOut(function(){
+        $(this).css({'visibility': 'hidden', 'opacity': '0.0'});
+        $(this).find('#framecontents').empty();
+    });
+    $('#container').css({'visibility': 'visible'});
+    setTimeout(function() {
+        $('#container').css({'display': 'block'});
+        $('#container').animate({opacity: '1.0'}, 1000);
+        setTimeout(function(){
+            $('#select > ul > li').each(function(ele){
+    			setTimeout(animateLetters, (250 * ele), $(this));
+    		});
+    		setTimeout(function(){
+    			$('#active').animate({'width': '50%'},250);
+    		}, 1000);
+    		clicked = false;
+        },1000);
+    }, 500);
 });
 
 

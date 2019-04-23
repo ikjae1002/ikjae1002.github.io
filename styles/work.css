@@ -1,11 +1,12 @@
 html{
-	scroll-behavior: smooth;
+	height: 100%;
 }
 
 body{
-	margin: auto;
 	width: 100%;
 	position: relative;
+	min-height: 100%;
+	/*background-color: rgb(220,220,220);*/
 }
 
 #topbar{
@@ -48,7 +49,7 @@ nav{
 	float: right;
 }
 
-li{
+nav > ul > a > li{
 	list-style: none;
 	float: left;
 	margin-right: 25px;
@@ -65,7 +66,7 @@ a{
 
 .underline{
 	height: 1px;
-	background-color: rgb(200,200,200);
+	background-color: rgb(190,190,190);
 	overflow: hidden;
 }
 
@@ -88,106 +89,128 @@ main{
 	padding-top: 113px;
 	position: relative;
 	padding-bottom: 350px;
+	margin: 0;
+	height: 80vh;
 }
 
 #container{
-	width: 100%;
 	position: relative;
+	height: 80%
 }
 
-#background{
-	background: url('../images/background.jpg') center center no-repeat;
-	background-size: cover;
-	width: 90%;
-	height: 80vh;
-	margin: auto;
-	z-index: 5;
+#navigator{
 	position: relative;
+	left: 50px;
+	top: 60%;
+	transform: translateY(-50%);
+	width: 10%;
 }
 
-#headline{
-	width: 80%;
-	left: 10%;
-	right: 10%;
-	position: relative;
-	margin-top: 0;
+#toparrow{
+	margin-left: 4px;
+	margin-bottom: 30px;
+	width: 40px;
+	height: 40px;
+	border-top: black 1px solid;
+	border-left: black 1px solid;
+	transform: rotate(45deg);
 }
 
-/*#cover{
-	position: absolute;
-	width: : 100%;
-	height: 50%;
-	left: 50%;
-	top: 0;
-	transform: translateX(-50%);
-	background-color: rgb(20,20,20);
-}*/
-
-#test{
-	position: absolute;
-	width: 100%;
-	height: 0%;
-	left: 50%;
-	top: 0;
-	transform: translateX(-50%);
-	background-color: rgb(20,20,20);
-
-}
-
-#first{
-	/*writing-mode: vertical-rl;
-	text-orientation: mixed;*/
-	text-align: center;
-	display: inline-block;
-	margin-top: 100px;
-	position: relative;
-	font-family: 'Merriweather', Raleway;
-	font-size: 36px;
-	color: white;
-}
-
-#descriptions{
-	width: 90%;
-	margin: 0;
-	left: 50%;
-	transform: translateX(-50%);
-	position: relative;
-	margin-top: 80px;
+#number{
 	font-family: 'Libre Franklin', Raleway;
-	font-size: 15px;
-	font-weight: 300;
-	line-height: 35px;
+	font-weight: 100;
+	font-size: 45px;
+}
+
+#bottomarrow{
+	margin-left: 4px;
+	margin-top: 30px;
+	width: 40px;
+	height: 40px;
+	border-right: black 1px solid;
+	border-bottom: black 1px solid;
+	transform: rotate(45deg);
+}
+
+#frame{
+	background: url("../images/work/fuji.png") center center no-repeat;
+	width: 80%;
+	height: 75vh;
+	position: absolute;
+	top: 0;
+	right: 7%;
+	background-size: cover;
+}
+
+#texts{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	left: 60px;
+}
+
+#title{
+	font-family: 'Cormorant Garamond', Serif;
+	font-weight: 500;
+	font-size: 65px;
+	letter-spacing: 0px;
+	line-height: 70px;
+	margin: 0;
+}
+
+#description{
+	font-family: 'Libre Franklin', Raleway;
+	font-weight: 200;
 	letter-spacing: 1px;
+	font-size: 18px;
+	line-height: 35px;
 }
 
-.descColumns{
-	float: left;
-	width: 26.67%;
-	padding-left: 3.33%;
-	padding-right: 3.33%;
-	margin-top: 50px;
-	opacity: 0;
+a{
+	text-decoration: none;
 }
 
-#contents{
-	width: 100%;
+#button{
+	top: 20px;
+	height: 50px;
+	width: 130px;
+	border: black 2px solid;
 	overflow: hidden;
+	margin: 0;
+	position: relative;
+	transition: color .3s;
+	border-radius: 25px;
 }
+
+#buttonname{
+	position: absolute;
+	line-height: 40px;
+	font-size: 16px;
+	letter-spacing: 2px;
+	font-family: 'Libre Franklin', Raleway;
+	font-weight: 300;
+	z-index: 2;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+
+/*#button:hover{
+	color: white;
+}*/
 
 #loading{
 	width: 100%;
-  	height: 100%;
-   	top: 0;
-   	left: 0;
-   	position: fixed;
-   	display: block;
-   	opacity: 1;
-   	background-color: #fff;
-   	z-index: 99;
-   	text-align: center;
+	height: 100vh;
+	position: absolute;
+	display: block;
+	opacity: 1;
+	background-color: white;
+	z-index: 97;
+	top: 0;
 }
 
-#spinningbar{
+.spinningbar{
 	position: absolute;
   	top: 50%;
   	left: 50%;
@@ -198,6 +221,17 @@ main{
   	width: 40px;
   	z-index: 100;
   	animation: spin .7s ease-in-out infinite;
+}
+
+#circle{
+	position: absolute;
+	width: 0;
+	height: 0;
+	background-color: black;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
 }
 
 @keyframes spin{
@@ -233,19 +267,15 @@ footer{
 #footerheading{
 	font-family: 'Libre Franklin', Raleway;
 	font-size: 30px;
-	/*color: white;*/
+	color: black;
 	font-weight: 100;
 	margin-top: 20px;
-	/*text-shadow: -1px -1px 0 white,
-				 1px -1px 0 white,
-				 -1px 1px 0 white,
-				 1px 1px 0 white;*/
 }
 
 #info > p{
 	font-family: 'Libre Franklin', Raleway;
 	font-size: 13px;
-	/*color: white;*/
+	color: black;
 	font-weight: 300;
 	opacity: .7;
 	letter-spacing: 2px;
@@ -259,20 +289,21 @@ footer{
 	font-size: 13px;
 	letter-spacing: 2px;
 	font-weight: 300;
-	/*color: white;*/
+	color: black;
 	opacity: .7;
 }
 
 #links > p{
 	font-family: 'Libre Franklin', Raleway;
 	font-size: 13px;
-	/*color: white;*/
+	color: black;
 	font-weight: 300;
 	opacity: .7;
 	letter-spacing: 2px;
 	margin-bottom: 8px;
 	margin-top: 8px;
 }
+/*josh loves pancakes*/
 
 #links > a{
 	text-decoration: none;
@@ -280,7 +311,7 @@ footer{
 	font-size: 13px;
 	letter-spacing: 2px;
 	font-weight: 300;
-	/*color: white;*/
+	color: black;
 	opacity: .7;
 	padding-bottom: 8px;
 	display: inline-block;
