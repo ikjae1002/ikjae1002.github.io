@@ -1,0 +1,311 @@
+html{
+	height: 100%;
+}
+
+body{
+	width: 100%;
+	position: relative;
+	min-height: 100%;
+	/*background-color: rgb(220,220,220);*/
+}
+
+#topbar{
+	top: 0;
+	position: absolute;
+	width: 100%;
+	display: block;
+	overflow: auto;
+	height: auto;
+	z-index: 10;
+}
+
+#heading{
+	position: relative;
+	left: 40px;
+	padding-top: 43px;
+	float: left;
+}
+
+#heading > h1{
+	font-family: 'Libre Franklin', Helvetica;
+	font-size: 22px;
+	font-weight: 200;
+	margin: 0;
+	color: black;
+	/*text-shadow: -1px -1px 0 black,
+				 1px -1px 0 black,
+				 -1px 1px 0 black,
+				 1px 1px 0 black;*/
+}
+
+#heading > h1 > span{
+	color: slategray;
+}
+
+nav{
+	position: relative;
+	right: 15px;
+	padding-top: 35px;
+	float: right;
+}
+
+nav > ul > a > li{
+	list-style: none;
+	float: left;
+	margin-right: 25px;
+	margin-left: 20px;
+	font-family: 'Libre Franklin', Raleway;
+	font-weight: 200;
+	font-size: 16px;
+	letter-spacing: 1px;
+}
+
+a{
+	color: black;
+}
+
+.underline{
+	height: 1px;
+	background-color: rgb(190,190,190);
+	overflow: hidden;
+}
+
+.fillline{
+	left: -60px;
+	height: 1px;
+	background-color: black;
+	position: relative;
+	transition-property: left;
+	transition-duration: .3s;
+}
+
+li:hover .underline > .fillline{
+	left: 0px;
+}
+
+main{
+	clear: both;
+	width: 100%;
+	padding-top: 113px;
+	position: relative;
+	padding-bottom: 350px;
+	margin: 0;
+}
+
+#container{
+	position: relative;
+	height: 80vh
+}
+
+#frame{
+	background: url("../images/work/maincover.png") center center no-repeat;
+	width: 90%;
+	height: 100%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	background-size: cover;
+}
+
+#descriptions{
+	left: 50%;
+	top: 55%;
+	width: 100%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+	position: absolute;
+	display: inline-block;
+}
+
+#title{
+	font-family: 'Cormorant Garamond', Serif;
+	font-weight: 500;
+	font-size: 65px;
+	letter-spacing: 0px;
+	color: white;
+	margin: 0;
+}
+
+#details{
+	font-family: 'Libre Franklin', Raleway;
+	font-weight: 200;
+	font-size: 14px;
+	letter-spacing: 2px;
+	line-height: 30px;
+	top: 10px;
+	position: relative;
+	margin: 0;
+	color: white;
+}
+
+#details > strong{
+	font-weight: 300;
+	font-size: 18px;
+}
+
+#container2{
+	text-align: center;
+	width: 50%;
+	margin-top: 100px;
+	left: 25%;
+	position: relative;
+}
+
+.subtitle{
+	font-family: 'Cormorant Garamond', Serif;
+	font-size: 34px;
+	font-weight: 500;
+	letter-spacing: 1px;
+	margin: 0;
+}
+
+.subdivider{
+	margin: auto;
+	margin-top: 15px;
+	margin-bottom: 25px;
+	position: relative;
+	width: 40px;
+	height: 3px;
+	border-radius: 1.5px;
+	background-color: black;
+}
+
+.divider{
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	position: relative;
+	width: 90%;
+	height: 1px;
+	background-color: rgb(200,200,200);
+}
+
+.paragraph{
+	font-family: 'Libre Franklin', Raleway;
+	font-weight: 300;
+	font-size: 14px;
+	letter-spacing: 1px;
+	line-height: 24px;
+}
+
+#website{
+	margin: auto;
+	width: 90%;
+	position: relative;
+	left: 5%;
+	margin-top: 20px;
+}
+
+#loading{
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	display: block;
+	opacity: 1;
+	background-color: white;
+	z-index: 97;
+	top: 0;
+}
+
+.mid{
+	margin: auto;
+	position: relative;
+	text-align: center;
+}
+
+.spinningbar{
+	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+  	height: 5px;
+  	border-radius: 2px;
+  	background-color: black;
+  	width: 40px;
+  	z-index: 100;
+  	animation: spin .7s ease-in-out infinite;
+}
+
+@keyframes spin{
+	0% {transform: rotate(0deg);}
+	100% {transform: rotate(180deg);}
+}
+
+footer{
+	clear: both;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 250px;
+	background-color: rgb(240,240,240);
+}
+
+#footercontent{
+	width: 70%;
+	margin: auto;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+}
+
+.columns{
+	display: inline-block;
+	padding-left: 30px;
+	padding-right: 30px;
+	float: left;
+}
+
+#footerheading{
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 30px;
+	color: black;
+	font-weight: 100;
+	margin-top: 20px;
+}
+
+#info > p{
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 13px;
+	color: black;
+	font-weight: 300;
+	opacity: .7;
+	letter-spacing: 2px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+
+#info > a{
+	text-decoration: none;
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 13px;
+	letter-spacing: 2px;
+	font-weight: 300;
+	color: black;
+	opacity: .7;
+}
+
+#links > p{
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 13px;
+	color: black;
+	font-weight: 300;
+	opacity: .7;
+	letter-spacing: 2px;
+	margin-bottom: 8px;
+	margin-top: 8px;
+}
+/*josh loves pancakes*/
+
+#links > a{
+	text-decoration: none;
+	font-family: 'Libre Franklin', Raleway;
+	font-size: 13px;
+	letter-spacing: 2px;
+	font-weight: 300;
+	color: black;
+	opacity: .7;
+	padding-bottom: 8px;
+	display: inline-block;
+}
